@@ -4,3 +4,6 @@ target/
 .env
 test-ledger/
 id.json
+*.json
+id.json
+.env
