@@ -1,0 +1,15 @@
+#!/bin/zsh
+set -euo pipefail
+
+ROOT="/Users/o2o_arms/parakletos-solana"
+
+cat <<EOF
+Gemini prompt set: parakletos-solana
+
+Load these files, in order:
+1. $ROOT/GEMINI.md
+2. $ROOT/prompts/parakletos-solana.md
+
+Suggested working directory:
+$ROOT
+EOF

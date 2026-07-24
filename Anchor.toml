@@ -1,0 +1,19 @@
+[toolchain]
+anchor_version = "1.0.0"
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+parakletos_program = "FsRpXPvwNbCaCU3CwC9UW9eFrwJYLCaq4hFVFhXyNd3w"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "./id.json"
+
+[scripts]
+test = "./node_modules/.bin/tsx ./node_modules/mocha/bin/mocha -p ./tsconfig.json -t 1000000 tests/parakletos_program.mts tests/agentic_web_mvp.mts"

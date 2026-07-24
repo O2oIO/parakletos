@@ -1,0 +1,78 @@
+:root {
+  --bg-color: #050505;
+  --panel-bg: #0a0a0a;
+  --accent-color: #00ff9d;
+  --secondary-accent: #00d1ff;
+  --danger-color: #ff3e3e;
+  --text-dim: #888;
+  --border-glow: 0 0 10px rgba(0, 255, 157, 0.3);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  background-image: 
+    linear-gradient(rgba(0, 255, 157, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 157, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  color: white;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.glow-text {
+  text-shadow: 0 0 8px var(--accent-color);
+  color: var(--accent-color);
+}
+
+.terminal-panel {
+  background: var(--panel-bg);
+  border: 1px solid rgba(0, 255, 157, 0.2);
+  border-radius: 4px;
+  box-shadow: var(--border-glow);
+  padding: 1rem;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
+.status-indicator.offline {
+  background-color: var(--text-dim);
+  box-shadow: none;
+}
+
+.danger-btn {
+  background: transparent;
+  border: 1px solid var(--danger-color);
+  color: var(--danger-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.danger-btn:hover {
+  background: var(--danger-color);
+  color: white;
+  box-shadow: 0 0 15px var(--danger-color);
+}
